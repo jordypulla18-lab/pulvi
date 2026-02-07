@@ -1,18 +1,18 @@
-const yearEl = document.getElementById('year');
+const yearElement = document.getElementById('year');
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-if (yearEl) {
-  yearEl.textContent = new Date().getFullYear();
+if (yearElement) {
+  yearElement.textContent = String(new Date().getFullYear());
 }
 
 navToggle?.addEventListener('click', () => {
-  const isOpen = navLinks?.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', String(Boolean(isOpen)));
+  const opened = navLinks?.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', String(Boolean(opened)));
 });
 
 navLinks?.addEventListener('click', (event) => {
-  if (event.target instanceof HTMLAnchorElement) {
+  if (event.target instanceof Element && event.target.closest('a')) {
     navLinks.classList.remove('open');
     navToggle?.setAttribute('aria-expanded', 'false');
   }

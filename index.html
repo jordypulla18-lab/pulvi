@@ -3,214 +3,190 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portafolio | Tu Nombre</title>
+    <meta
+      name="description"
+      content="Portafolio profesional de Jordy Pulla, Tecnólogo en Informática y Telecomunicaciones en Ecuador."
+    />
+    <title>Portafolio | Jordy Pulla</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <nav class="nav">
-        <a class="logo" href="#inicio">TuNombre</a>
-        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
-          ☰
-        </button>
+      <nav class="nav container" aria-label="Navegación principal">
+        <a class="logo" href="#inicio">Jordy Pulla</a>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
         <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
           <li><a href="#sobre-mi">Sobre mí</a></li>
           <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#educacion">Educación</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
-        <button class="theme-toggle" type="button" aria-pressed="false">
-          🌙
-        </button>
       </nav>
     </header>
 
     <main>
-      <section id="inicio" class="hero">
+      <section id="inicio" class="hero container section">
         <div class="hero-content">
-          <p class="eyebrow">Hola, soy</p>
-          <h1>Tu Nombre</h1>
+          <p class="eyebrow">Tecnólogo en Informática y Telecomunicaciones</p>
+          <h1>Jordy Pulla</h1>
           <p class="subtitle">
-            Diseñador/a y desarrollador/a digital enfocado/a en crear experiencias
-            web limpias, funcionales y centradas en las personas.
+            Profesional orientado a soporte técnico, redes, telecomunicaciones y
+            seguridad informática, con enfoque en servicio al cliente, trabajo
+            responsable y crecimiento continuo en el área tecnológica.
           </p>
           <div class="hero-actions">
-            <a class="btn primary" href="#proyectos">Ver proyectos</a>
-            <a class="btn ghost" href="#contacto">Hablemos</a>
-          </div>
-          <div class="hero-stats">
-            <div>
-              <strong>+3 años</strong>
-              <span>de experiencia</span>
-            </div>
-            <div>
-              <strong>20+</strong>
-              <span>proyectos completados</span>
-            </div>
-            <div>
-              <strong>100%</strong>
-              <span>enfoque humano</span>
-            </div>
+            <a class="btn primary" href="#contacto">Contactar</a>
+            <a class="btn ghost" href="#experiencia">Ver experiencia</a>
           </div>
         </div>
-        <div class="hero-card">
-          <div class="badge">Disponible para nuevos proyectos</div>
-          <img
-            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80"
-            alt="Retrato profesional"
-          />
-          <div class="hero-card-info">
-            <p>Especialidad</p>
-            <h3>Product & UI Design</h3>
-            <span>Ciudad, País</span>
-          </div>
+        <aside class="profile-card" aria-label="Información profesional resumida">
+          <h2>Perfil profesional</h2>
+          <ul>
+            <li>📍 Paraíso de la Flor – Ecuador</li>
+            <li>🚗 Licencia de conducir Tipo A y B</li>
+            <li>🧑‍💻 Interés en soporte, redes e informática aplicada</li>
+            <li>🤝 Responsable, adaptable y técnico</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section id="sobre-mi" class="section container">
+        <h2>Sobre mí</h2>
+        <p>
+          Soy Jordy Pulla, Tecnólogo en Informática y Telecomunicaciones. Tengo
+          experiencia en soporte y mantenimiento informático, redes y
+          telecomunicaciones, seguridad informática, sistemas Linux y atención al
+          cliente.
+        </p>
+        <p>
+          Me caracterizo por ser una persona responsable, técnica y adaptable,
+          con interés en seguir creciendo profesionalmente y aportar soluciones
+          prácticas dentro del área tecnológica.
+        </p>
+      </section>
+
+      <section id="habilidades" class="section container">
+        <h2>Habilidades técnicas</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Soporte informático</h3>
+            <p>Soporte y mantenimiento de equipos de computación.</p>
+          </article>
+          <article class="card">
+            <h3>Redes y telecomunicaciones</h3>
+            <p>Configuración básica, diagnóstico y soporte de conectividad.</p>
+          </article>
+          <article class="card">
+            <h3>Seguridad informática</h3>
+            <p>Buenas prácticas de protección de equipos y datos.</p>
+          </article>
+          <article class="card">
+            <h3>Sistemas Linux</h3>
+            <p>Manejo operativo y asistencia técnica en entornos Linux.</p>
+          </article>
+          <article class="card">
+            <h3>Cámaras de seguridad</h3>
+            <p>Instalación y soporte de sistemas de videovigilancia.</p>
+          </article>
+          <article class="card">
+            <h3>Electricidad y electrónica</h3>
+            <p>Electricidad básica y diseño de circuitos electrónicos.</p>
+          </article>
+        </div>
+
+        <h3 class="subheading">Programación y herramientas de oficina</h3>
+        <div class="split-grid">
+          <article class="card">
+            <h4>Programación</h4>
+            <ul>
+              <li>Lenguajes: C y C++</li>
+              <li>Conocimientos básicos de lógica de programación</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h4>Ofimática</h4>
+            <ul>
+              <li>Microsoft Word, Excel y PowerPoint (nivel avanzado)</li>
+              <li>Redacción académica</li>
+            </ul>
+          </article>
         </div>
       </section>
 
-      <section id="sobre-mi" class="section about">
-        <div>
-          <h2>Sobre mí</h2>
-          <p>
-            Me encanta transformar ideas en productos digitales con impacto real.
-            Combino investigación, estrategia y diseño para construir soluciones
-            escalables que conectan con las personas.
-          </p>
-          <p>
-            He colaborado con startups y marcas consolidadas, liderando procesos
-            de discovery, prototipado y lanzamiento.
-          </p>
-          <div class="pill-row">
-            <span>UX Research</span>
-            <span>UI Design</span>
-            <span>Frontend</span>
-            <span>Design Systems</span>
-          </div>
-        </div>
+      <section id="experiencia" class="section container">
+        <h2>Experiencia laboral</h2>
         <div class="timeline">
-          <div class="timeline-item">
-            <h4>2024 · Lead Designer</h4>
-            <p>Mejoré el onboarding de una app fintech, +35% activación.</p>
-          </div>
-          <div class="timeline-item">
-            <h4>2022 · Product Designer</h4>
-            <p>Construí un design system para un e-commerce regional.</p>
-          </div>
-          <div class="timeline-item">
-            <h4>2020 · Frontend Developer</h4>
-            <p>Lancé sitios de marketing para equipos SaaS internacionales.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="habilidades" class="section skills">
-        <h2>Habilidades</h2>
-        <div class="skills-grid">
-          <article>
-            <h3>Diseño UX/UI</h3>
-            <p>Flujos, wireframes, prototipos interactivos y pruebas de usabilidad.</p>
-          </article>
-          <article>
-            <h3>Desarrollo Web</h3>
-            <p>HTML, CSS, JavaScript, React y buenas prácticas de accesibilidad.</p>
-          </article>
-          <article>
-            <h3>Estrategia</h3>
-            <p>Roadmaps, OKRs, documentación y liderazgo en equipos cross.</p>
-          </article>
-          <article>
-            <h3>Herramientas</h3>
-            <p>Figma, Notion, Miro, Jira, GitHub y analytics.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="proyectos" class="section projects">
-        <div class="section-heading">
-          <h2>Proyectos destacados</h2>
-          <p>
-            Una selección de trabajos recientes con enfoque en métricas de negocio
-            y experiencia de usuario.
-          </p>
-        </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="project-tag">Fintech</div>
-            <h3>Dashboard financiero</h3>
-            <p>
-              Rediseño integral del panel de control para mejorar la toma de
-              decisiones y reducir fricción.
-            </p>
+          <article class="timeline-item">
+            <h3>Consorcio Urvaseo</h3>
+            <p class="meta">Ayudante y Auxiliar de Limpieza · 2021 – Actualidad</p>
             <ul>
-              <li>+28% uso semanal</li>
-              <li>-18% tickets de soporte</li>
+              <li>Limpieza de zonas urbanas.</li>
+              <li>Manejo de desechos peligrosos.</li>
+              <li>Trabajo en equipo y responsabilidad operativa.</li>
             </ul>
           </article>
-          <article class="project-card">
-            <div class="project-tag">SaaS</div>
-            <h3>Plataforma de onboarding</h3>
-            <p>
-              Automatización de flujos de bienvenida con personalización en
-              tiempo real.
-            </p>
+          <article class="timeline-item">
+            <h3>Comercial Bryan</h3>
+            <p class="meta">Servicio al Cliente y Asistente de Bodega · 2020 – 2021</p>
             <ul>
-              <li>+40% activación</li>
-              <li>+12 NPS</li>
+              <li>Atención al cliente.</li>
+              <li>Manejo de inventarios.</li>
+              <li>Carga y descarga de productos.</li>
             </ul>
           </article>
-          <article class="project-card">
-            <div class="project-tag">E-commerce</div>
-            <h3>Experiencia mobile</h3>
-            <p>
-              Optimización del checkout y microinteracciones para reducir
-              abandono.
-            </p>
+          <article class="timeline-item">
+            <h3>La Casa del Rebobinador</h3>
+            <p class="meta">Asistente Técnico y Atención al Cliente · 2019</p>
             <ul>
-              <li>-25% abandono</li>
-              <li>+15% conversiones</li>
+              <li>Asistencia técnica en electricidad industrial.</li>
+              <li>Despacho de repuestos eléctricos y línea blanca.</li>
+              <li>Atención al cliente presencial y telefónica.</li>
             </ul>
           </article>
         </div>
       </section>
 
-      <section id="contacto" class="section contact">
-        <div>
-          <h2>Trabajemos juntos</h2>
-          <p>
-            Estoy disponible para proyectos freelance, consultorías o posiciones
-            full-time remotas. Cuéntame sobre tu idea.
-          </p>
+      <section id="educacion" class="section container">
+        <h2>Educación</h2>
+        <div class="card-grid two-columns">
+          <article class="card">
+            <h3>Tecnología en Informática y Telecomunicaciones</h3>
+            <p>Universidad de Guayaquil</p>
+            <p class="meta">2023 – Actualidad</p>
+          </article>
+          <article class="card">
+            <h3>Ingeniería en Tecnología de la Información</h3>
+            <p>Instituto Superior Tecnológico Vicente Rocafuerte</p>
+            <p class="meta">2018 – 2023</p>
+          </article>
         </div>
-        <form class="contact-form">
-          <label>
-            Nombre
-            <input type="text" placeholder="Tu nombre" required />
-          </label>
-          <label>
-            Email
-            <input type="email" placeholder="tu@email.com" required />
-          </label>
-          <label>
-            Mensaje
-            <textarea rows="4" placeholder="¿Cómo puedo ayudarte?" required></textarea>
-          </label>
-          <button class="btn primary" type="submit">Enviar mensaje</button>
-        </form>
+      </section>
+
+      <section id="contacto" class="section container contact-section">
+        <h2>Contacto</h2>
+        <p>
+          Estoy disponible para oportunidades en soporte técnico, redes,
+          informática y áreas relacionadas con tecnología.
+        </p>
+        <div class="contact-grid">
+          <a class="contact-item" href="tel:+593992308952">📞 0992308952</a>
+          <a class="contact-item" href="mailto:jordypulla18@gmail.com">📧 jordypulla18@gmail.com</a>
+          <p class="contact-item">📍 Paraíso de la Flor – Ecuador</p>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>© <span id="year"></span> Tu Nombre. Todos los derechos reservados.</p>
-      <div class="socials">
-        <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="mailto:hola@tunombre.com">hola@tunombre.com</a>
-      </div>
+      <p>© <span id="year"></span> Jordy Pulla. Portafolio profesional.</p>
+      <p>Diseño web moderno, responsive y listo para GitHub Pages.</p>
     </footer>
 
     <script src="script.js"></script>

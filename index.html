@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Poema Café | Warm Coffee</title>
+  <meta name="description" content="Café premium para estudiar y trabajar: WiFi rápido, enchufes, ambiente tranquilo. Reserva por WhatsApp en segundos." />
+  <meta name="keywords" content="cafetería, café premium, wifi, estudiar, trabajar, capuchino, latte, postres, reserva, Poema Café" />
+  <meta name="theme-color" content="#c57a3a" />
+
+  <meta property="og:title" content="Poema Café | Warm Coffee" />
+  <meta property="og:description" content="WiFi rápido, enchufes, ambiente tranquilo y promociones. Reserva por WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__bar" id="scrollBar"></div>
+  </div>
+
+  <!-- Top promo bar -->
+  <div class="topbar" role="status" aria-live="polite">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span class="pill pill--hot">Promo</span>
+        <span class="topbar-text">
+          Miércoles: <strong>2 Capuchinos por $6.00</strong> •
+          Quedan <strong><span id="promoCounter">12</span></strong> cupos hoy
+        </span>
+      </div>
+      <div class="topbar-right">
+        <a class="topbar-link" href="#ubicacion">Ubicación</a>
+        <a class="topbar-link" href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ambient background blobs -->
+  <div class="bg-blobs" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="blob b4"></span>
+  </div>
+
+  <header class="hero" id="inicio">
+    <nav class="container nav" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark" aria-hidden="true">☕</span>
+        <span class="brand-text">Poema Café</span>
+      </a>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Cambiar tema">🌙</button>
+        <button class="icon-btn nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">☰</button>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a class="nav-cta btn magnetic" id="ctaNav" target="_blank" rel="noreferrer" href="#">Reservar</a></li>
+      </ul>
+    </nav>
+
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <div class="hero-kicker">
+          <span class="kicker-pill">WiFi rápido</span>
+          <span class="kicker-dot">•</span>
+          <span class="kicker-pill">Enchufes</span>
+          <span class="kicker-dot">•</span>
+          <span class="kicker-pill">Ambiente tranquilo</span>
+        </div>
+
+        <h1>
+          Un café premium para <span class="txt-grad">estudiar</span>,
+          <span class="txt-grad">trabajar</span> y desconectarte del ruido
+        </h1>
+
+        <p class="hero-sub">
+          Mesas cómodas, buena iluminación y bebidas top.
+          Reserva por WhatsApp en segundos y recibe <strong>10% de descuento</strong> en tu primera visita.
+        </p>
+
+        <div class="hero-ctas">
+          <a class="btn magnetic" id="ctaHero" target="_blank" rel="noreferrer" href="#">
+            Reservar por WhatsApp
+            <span class="btn-shine" aria-hidden="true"></span>
+          </a>
+          <a class="btn ghost magnetic" href="#menu">Ver menú</a>
+        </div>
+
+        <div class="trust-row" aria-label="Prueba social">
+          <div class="trust-item glass">
+            <span class="trust-big">4.9</span>
+            <span class="trust-small">calificación</span>
+          </div>
+          <div class="trust-item glass">
+            <span class="trust-big">+1200</span>
+            <span class="trust-small">clientes felices</span>
+          </div>
+          <div class="trust-item glass">
+            <span class="trust-big">10s</span>
+            <span class="trust-small">para reservar</span>
+          </div>
+        </div>
+
+        <div class="hero-badges" aria-label="Beneficios">
+          <span>✅ Pet friendly</span>
+          <span>✅ Opciones veganas</span>
+          <span>✅ Música suave</span>
+          <span>✅ Atención rápida</span>
+        </div>
+      </div>
+
+      <aside class="hero-card reveal delay-1" aria-label="Tarjeta destacada">
+        <div class="hero-card-top">
+          <span class="chip">⭐ 4.9/5</span>
+          <span class="chip">⏱️ Rápido</span>
+          <span class="chip">🔌 Enchufes</span>
+        </div>
+
+        <div class="hero-visual" id="tiltCard" aria-hidden="true">
+          <div class="steam s1"></div>
+          <div class="steam s2"></div>
+          <div class="steam s3"></div>
+          <div class="cup"></div>
+          <div class="shine"></div>
+          <div class="sparkle sp1"></div>
+          <div class="sparkle sp2"></div>
+          <div class="sparkle sp3"></div>
+        </div>
+
+        <div class="hero-card-info">
+          <h3>Ambiente perfecto</h3>
+          <p>Para lectura, laptop y reuniones cortas.</p>
+
+          <div class="mini-ctas">
+            <a class="btn small magnetic" href="#contacto">Reservar</a>
+            <a class="btn small ghost magnetic" href="#galeria">Ver fotos</a>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="meta">
+            <span class="meta-pill">📍 Centro</span>
+            <span class="meta-pill">🕘 07:00–13:00</span>
+          </div>
+
+          <button class="text-link" id="openCart" type="button">Abrir pedido rápido →</button>
+        </div>
+      </aside>
+    </div>
+
+    <div class="sticky-cta" aria-label="Acción rápida">
+      <a class="btn small magnetic" id="ctaSticky" target="_blank" rel="noreferrer" href="#">Reservar</a>
+      <a class="btn small ghost magnetic" href="#menu">Menú</a>
+      <button class="btn small ghost magnetic" id="openCartMobile" type="button">Pedido</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="container section" id="promo">
+      <div class="promo-premium reveal">
+        <div class="promo-left">
+          <span class="pill pill--cool">Promo de la semana</span>
+          <h2>Miércoles: 2 Capuchinos por $6.00</h2>
+          <p class="muted">
+            Reserva y te guardamos mesa. Quedan <strong><span data-counter="promo">12</span></strong> cupos hoy.
+          </p>
+
+          <div class="promo-actions">
+            <a class="btn magnetic" id="ctaPromo" target="_blank" rel="noreferrer" href="#">
+              Quiero la promo
+              <span class="btn-shine" aria-hidden="true"></span>
+            </a>
+            <button class="btn ghost magnetic" id="btnConfetti" type="button">Celebrar 🎉</button>
+          </div>
+
+          <div class="promo-points">
+            <div class="point">✅ Ideal para estudiar</div>
+            <div class="point">✅ Perfecto para reuniones</div>
+            <div class="point">✅ Atención rápida</div>
+          </div>
+        </div>
+
+        <div class="promo-right" aria-hidden="true">
+          <div class="glass-orb o1"></div>
+          <div class="glass-orb o2"></div>
+          <div class="glass-orb o3"></div>
+          <div class="grid-shine"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="menu">
+      <div class="section-head reveal">
+        <h2>Menú destacado</h2>
+        <p>Busca y arma tu pedido en segundos. Luego lo enviamos a WhatsApp.</p>
+      </div>
+
+      <div class="menu-tools reveal">
+        <div class="search">
+          <label class="sr-only" for="menuSearch">Buscar</label>
+          <input id="menuSearch" type="search" placeholder="Buscar: capuchino, latte, postre..." autocomplete="off" />
+        </div>
+        <div class="filters" role="group" aria-label="Filtros de menú">
+          <button class="filter-btn active" type="button" data-filter="all">Todo</button>
+          <button class="filter-btn" type="button" data-filter="bebidas">Bebidas</button>
+          <button class="filter-btn" type="button" data-filter="postres">Postres</button>
+          <button class="filter-btn" type="button" data-filter="snacks">Snacks</button>
+        </div>
+      </div>
+
+      <div class="cards" id="menuGrid">
+        <article class="card reveal" data-cat="bebidas" data-name="Capuchino Clásico">
+          <div class="card-head">
+            <h3>Capuchino Clásico</h3>
+            <span class="price">$3.50</span>
+          </div>
+          <p>Espresso, leche vaporizada y espuma cremosa.</p>
+          <div class="card-actions">
+            <button class="mini-btn magnetic" data-add="Capuchino Clásico" data-price="3.50">Añadir</button>
+          </div>
+        </article>
+
+        <article class="card reveal delay-1" data-cat="bebidas" data-name="Latte Vainilla">
+          <div class="card-head">
+            <h3>Latte Vainilla</h3>
+            <span class="price">$4.20</span>
+          </div>
+          <p>Sabor suave con toque dulce natural.</p>
+          <div class="card-actions">
+            <button class="mini-btn magnetic" data-add="Latte Vainilla" data-price="4.20">Añadir</button>
+          </div>
+        </article>
+
+        <article class="card reveal delay-2" data-cat="postres" data-name="Cheesecake Frutos Rojos">
+          <div class="card-head">
+            <h3>Cheesecake Frutos Rojos</h3>
+            <span class="price">$5.00</span>
+          </div>
+          <p>Postre casero con base crujiente.</p>
+          <div class="card-actions">
+            <button class="mini-btn magnetic" data-add="Cheesecake Frutos Rojos" data-price="5.00">Añadir</button>
+          </div>
+        </article>
+
+        <article class="card reveal" data-cat="bebidas" data-name="Matcha Latte">
+          <div class="card-head">
+            <h3>Matcha Latte</h3>
+            <span class="price">$4.60</span>
+          </div>
+          <p>Alternativa suave para tardes tranquilas.</p>
+          <div class="card-actions">
+            <button class="mini-btn magnetic" data-add="Matcha Latte" data-price="4.60">Añadir</button>
+          </div>
+        </article>
+
+        <article class="card reveal delay-1" data-cat="snacks" data-name="Sándwich artesanal">
+          <div class="card-head">
+            <h3>Sándwich artesanal</h3>
+            <span class="price">$4.90</span>
+          </div>
+          <p>Pan tostado + ingredientes frescos (opción veggie).</p>
+          <div class="card-actions">
+            <button class="mini-btn magnetic" data-add="Sándwich artesanal" data-price="4.90">Añadir</button>
+          </div>
+        </article>
+
+        <article class="card reveal delay-2" data-cat="postres" data-name="Galletas caseras">
+          <div class="card-head">
+            <h3>Galletas caseras</h3>
+            <span class="price">$2.00</span>
+          </div>
+          <p>Perfectas para acompañar tu café.</p>
+          <div class="card-actions">
+            <button class="mini-btn magnetic" data-add="Galletas caseras" data-price="2.00">Añadir</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="cart-bar reveal" aria-label="Pedido rápido">
+        <div class="cart-left">
+          <strong>Tu selección:</strong> <span id="cartItems">0</span> ítems
+          <span class="sep">•</span>
+          <strong>Total:</strong> $<span id="cartTotal">0.00</span>
+        </div>
+        <div class="cart-right">
+          <button class="btn small ghost magnetic" id="openCart2" type="button">Ver pedido</button>
+          <a class="btn small magnetic" id="ctaCart" target="_blank" rel="noreferrer" href="#">Pedir por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="beneficios">
+      <div class="container section">
+        <div class="section-head reveal">
+          <h2>¿Por qué Poema Café?</h2>
+          <p>Lo que más valoran quienes vienen a estudiar o trabajar.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <div class="icon">⚡</div>
+            <h3>WiFi rápido</h3>
+            <p>Ideal para videollamadas, tareas y trabajo remoto.</p>
+          </article>
+
+          <article class="feature reveal delay-1">
+            <div class="icon">🔌</div>
+            <h3>Enchufes</h3>
+            <p>Mesas listas para laptop, sin estrés.</p>
+          </article>
+
+          <article class="feature reveal delay-2">
+            <div class="icon">📚</div>
+            <h3>Ambiente tranquilo</h3>
+            <p>Iluminación cómoda y música suave.</p>
+          </article>
+
+          <article class="feature reveal delay-3">
+            <div class="icon">🌿</div>
+            <h3>Opciones veganas</h3>
+            <p>Bebidas y postres con alternativas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="galeria">
+      <div class="section-head reveal">
+        <h2>Galería</h2>
+        <p>Tip PRO: cambia estas fotos por las del local y suben las reservas.</p>
+      </div>
+
+      <div class="gallery">
+        <figure class="shot reveal">
+          <img alt="Café servido" loading="lazy"
+               src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1400&q=70">
+        </figure>
+        <figure class="shot reveal delay-1">
+          <img alt="Ambiente cafetería" loading="lazy"
+               src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1400&q=70">
+        </figure>
+        <figure class="shot reveal">
+          <img alt="Postre" loading="lazy"
+               src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=70">
+        </figure>
+        <figure class="shot reveal delay-1">
+          <img alt="Persona con laptop" loading="lazy"
+               src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=70">
+        </figure>
+        <figure class="shot reveal delay-2">
+          <img alt="Barista preparando café" loading="lazy"
+               src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1400&q=70">
+        </figure>
+        <figure class="shot reveal">
+          <img alt="Mesa con libreta" loading="lazy"
+               src="https://images.unsplash.com/photo-1459755486867-b55449bb39ff?auto=format&fit=crop&w=1400&q=70">
+        </figure>
+      </div>
+    </section>
+
+    <section class="alt" id="resenas">
+      <div class="container section">
+        <div class="section-head reveal">
+          <h2>Reseñas</h2>
+          <p>Prueba social que convierte. Desliza y mira lo que dicen.</p>
+        </div>
+
+        <div class="slider reveal" aria-label="Carrusel de reseñas">
+          <button class="slider-btn magnetic" id="prevReview" aria-label="Anterior">‹</button>
+
+          <div class="slider-viewport" id="reviewViewport">
+            <div class="slider-track" id="reviewTrack">
+              <article class="review">
+                <div class="review-top">
+                  <div class="avatar">A</div>
+                  <div>
+                    <strong>Andrea M.</strong>
+                    <div class="stars">★★★★★</div>
+                  </div>
+                </div>
+                <p>“El mejor lugar para estudiar. Silencioso, cómodo y el latte es increíble.”</p>
+              </article>
+
+              <article class="review">
+                <div class="review-top">
+                  <div class="avatar">L</div>
+                  <div>
+                    <strong>Luis P.</strong>
+                    <div class="stars">★★★★★</div>
+                  </div>
+                </div>
+                <p>“Muy buen ambiente, rápido el WiFi y el cheesecake es top.”</p>
+              </article>
+
+              <article class="review">
+                <div class="review-top">
+                  <div class="avatar">D</div>
+                  <div>
+                    <strong>Daniela R.</strong>
+                    <div class="stars">★★★★☆</div>
+                  </div>
+                </div>
+                <p>“Excelente atención. Recomiendo el capuchino clásico.”</p>
+              </article>
+
+              <article class="review">
+                <div class="review-top">
+                  <div class="avatar">J</div>
+                  <div>
+                    <strong>Jorge C.</strong>
+                    <div class="stars">★★★★★</div>
+                  </div>
+                </div>
+                <p>“Perfecto para trabajar con laptop, hay enchufes y música suave.”</p>
+              </article>
+            </div>
+          </div>
+
+          <button class="slider-btn magnetic" id="nextReview" aria-label="Siguiente">›</button>
+        </div>
+
+        <div class="center reveal">
+          <a class="btn ghost magnetic" href="#contacto">Quiero reservar</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="faq">
+      <div class="section-head reveal">
+        <h2>Preguntas frecuentes</h2>
+        <p>Menos dudas = más reservas.</p>
+      </div>
+
+      <div class="faq-grid">
+        <details class="faq reveal">
+          <summary>¿Puedo reservar por WhatsApp?</summary>
+          <p>Sí. Toca “Reservar” y te respondemos en horario laboral.</p>
+        </details>
+
+        <details class="faq reveal delay-1">
+          <summary>¿Hay enchufes para laptop?</summary>
+          <p>Sí. Tenemos mesas con acceso a enchufes (según disponibilidad).</p>
+        </details>
+
+        <details class="faq reveal delay-2">
+          <summary>¿Hay opciones veganas?</summary>
+          <p>Sí. Bebidas y postres con alternativas.</p>
+        </details>
+
+        <details class="faq reveal">
+          <summary>¿Puedo ir con mi mascota?</summary>
+          <p>Sí, pet friendly, con respeto al espacio y a otras personas.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="container section" id="ubicacion">
+      <div class="section-head reveal">
+        <h2>Ubicación y horario</h2>
+        <p>Hazlo claro y aumentan las visitas.</p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card reveal">
+          <h3>Horario</h3>
+          <ul>
+            <li>Lun–Vie: 07:00 – 13:00</li>
+            <li>Sáb: 07:00 – 13:00</li>
+          </ul>
+          <p class="muted">*Edita horarios cuando quieras.</p>
+        </div>
+
+        <div class="info-card reveal delay-1">
+          <h3>Dirección</h3>
+          <p>📍 Av. Principal #123, Centro</p>
+          <p class="muted">*Pon aquí tu dirección real.</p>
+          <div class="info-actions">
+            <a class="btn small magnetic" href="#contacto">Reservar</a>
+            <a class="btn small ghost magnetic" id="ctaWhatsLocation" target="_blank" rel="noreferrer" href="#">WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="map-card reveal delay-2">
+          <div class="map-pin">📍</div>
+          <p class="muted">Puedes incrustar Google Maps (iframe).</p>
+          <button class="mini-btn magnetic" id="mapHint" type="button">¿Cómo lo pongo?</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="contacto">
+      <div class="section-head reveal">
+        <h2>Contacto</h2>
+        <p>El formulario abre WhatsApp (más conversiones).</p>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="two">
+          <label class="sr-only" for="name">Nombre</label>
+          <input id="name" name="name" type="text" placeholder="Tu nombre" required minlength="2" />
+
+          <label class="sr-only" for="email">Correo</label>
+          <input id="email" name="email" type="email" placeholder="Tu correo" required />
+        </div>
+
+        <label class="sr-only" for="message">Mensaje</label>
+        <textarea id="message" name="message" rows="4" placeholder="Mensaje" required minlength="5"></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn magnetic">
+            Enviar
+            <span class="btn-shine" aria-hidden="true"></span>
+          </button>
+          <span class="muted">Respuesta en horario laboral.</span>
+        </div>
+      </form>
+
+      <p class="form-msg" id="formMsg" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Poema Café • <a class="footer-link" href="#inicio">Volver arriba</a></p>
+  </footer>
+
+  <button id="toTop" class="to-top magnetic" aria-label="Volver arriba">↑</button>
+
+  <a class="wa-float magnetic" id="waFloat" target="_blank" rel="noreferrer" href="#" aria-label="Chatear por WhatsApp">💬</a>
+
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Cart Drawer -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <aside class="drawer-panel" role="dialog" aria-modal="true" aria-label="Tu pedido">
+      <div class="drawer-head">
+        <strong>Tu pedido</strong>
+        <button class="icon-btn magnetic" id="closeDrawer" type="button" aria-label="Cerrar">✕</button>
+      </div>
+
+      <div class="drawer-body">
+        <div class="drawer-empty" id="drawerEmpty">
+          <p><strong>Aún no has añadido nada.</strong></p>
+          <p class="muted">Elige algo del menú y se arma tu pedido aquí.</p>
+        </div>
+
+        <ul class="drawer-list" id="drawerList" aria-label="Lista de productos"></ul>
+      </div>
+
+      <div class="drawer-foot">
+        <div class="drawer-total">
+          <span class="muted">Total</span>
+          <strong>$<span id="drawerTotal">0.00</span></strong>
+        </div>
+        <div class="drawer-actions">
+          <button class="btn small ghost magnetic" id="clearCart" type="button">Vaciar</button>
+          <a class="btn small magnetic" id="drawerWhats" target="_blank" rel="noreferrer" href="#">Enviar a WhatsApp</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Poema Café",
+    "description": "Café premium para estudiar y trabajar con WiFi rápido y ambiente tranquilo.",
+    "telephone": "+593000000000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Principal #123",
+      "addressLocality": "Centro",
+      "addressCountry": "EC"
+    },
+    "servesCuisine": ["Café", "Postres", "Snacks"]
+  }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

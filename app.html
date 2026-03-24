@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard PRO</title>
+
+<style>
+body{font-family:Arial;background:#0f172a;color:white;margin:0}
+.container{display:flex;justify-content:center;align-items:center;height:100vh}
+.box{background:#1e293b;padding:30px;border-radius:10px;width:300px;text-align:center}
+input{width:100%;padding:10px;margin:10px 0;border:none;border-radius:5px}
+button{padding:10px;background:#38bdf8;border:none;border-radius:5px;cursor:pointer;width:100%}
+.dashboard{padding:20px}
+.card{background:#1e293b;padding:20px;margin:10px 0;border-radius:10px}
+.logout{position:absolute;top:20px;right:20px;width:auto}
+</style>
+
+</head>
+<body>
+
+<div id="app"></div>
+
+<script>
+let usuarioCorrecto = "1";
+let passwordCorrecta = "1";
+
+// Datos simulados
+let datos = {
+    usuarios: 10,
+    ventas: 500,
+    productos: 25
+};
+
+// Verificar sesión
+if(localStorage.getItem('login') === 'true'){
+    mostrarDashboard();
+}else{
+    mostrarLogin();
+}
+
+function mostrarLogin(){
+    document.getElementById('app').innerHTML = `
+        <div class="container">
+            <div class="box">
+                <h2>Login</h2>
+                <input type="text" id="user" placeholder="Usuario">
+                <input type="password" id="pass" placeholder="Contraseña">
+                <button onclick="login()">Ingresar</button>
+                <p id="error"></p>
+            </div>
+        </div>
+    `;
+}
+
+function login(){
+    let user = document.getElementById('user').value;
+    let pass = document.getElementById('pass').value;
+
+    if(user === usuarioCorrecto && pass === passwordCorrecta){
+        localStorage.setItem('login', 'true');
+        localStorage.setItem('user', user);
+        mostrarDashboard();
+    }else{
+        document.getElementById('error').textContent = "Datos incorrectos";
+    }
+}
+
+function mostrarDashboard(){
+    let user = localStorage.getItem('user');
+
+    document.getElementById('app').innerHTML = `
+        <button class="logout" onclick="logout()">Cerrar sesión</button>
+        <div class="dashboard">
+            <h1>Bienvenido, ${user}</h1>
+
+            <div class="card">Usuarios: ${datos.usuarios}</div>
+            <div class="card">Ventas: $${datos.ventas}</div>
+            <div class="card">Productos: ${datos.productos}</div>
+
+            <button onclick="generarDatos()">Actualizar datos</button>
+        </div>
+    `;
+}
+
+function generarDatos(){
+    datos.usuarios = Math.floor(Math.random()*100);
+    datos.ventas = Math.floor(Math.random()*1000);
+    datos.productos = Math.floor(Math.random()*50);
+    mostrarDashboard();
+}
+
+function logout(){
+    localStorage.removeItem('login');
+    localStorage.removeItem('user');
+    mostrarLogin();
+}
+</script>
+
+</body>
+</html>

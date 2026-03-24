@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ELECCOM – La Casa del Rebobinador</title>
+  <meta name="description" content="Servicio técnico y venta de materiales eléctricos para rebobinado y autopartes eléctricas. Inventario editable con imágenes + reporte de ventas diarias." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header" id="inicio">
+    <nav class="container nav" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="mark">E</span>
+        <span class="brandtext">
+          <span class="name" id="bizName">ELECCOM</span>
+          <span class="sub">La Casa del Rebobinador</span>
+        </span>
+      </a>
+
+      <div class="navbtns">
+        <button class="iconbtn" id="themeBtn" type="button" aria-pressed="false" aria-label="Cambiar tema">🌙</button>
+
+        <button class="cartbtn" id="cartBtn" type="button" aria-label="Abrir carrito">
+          Carrito <span class="cartcount" id="cartCount">0</span>
+        </button>
+
+        <button class="iconbtn" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">☰</button>
+      </div>
+
+      <ul class="links" id="navLinks">
+        <li><a href="#servicio">Servicio</a></li>
+        <li><a href="#antes-despues">Antes/Después</a></li>
+        <li><a href="#catalogo">Materiales</a></li>
+        <li><a href="#testimonios">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><button class="btn ghost" id="adminOpenTop" type="button">Admin</button></li>
+        <li><a class="btn" id="ctaNav" href="#" target="_blank" rel="noreferrer">WhatsApp</a></li>
+      </ul>
+    </nav>
+
+    <div class="promo-bar" role="status">🔥 Promo: 10% de descuento en rebobinado este mes • Cotiza por WhatsApp</div>
+
+    <!-- HERO (Presentación C: Landing moderna) -->
+    <section class="heroModern">
+      <video autoplay muted loop playsinline class="heroVideo" aria-hidden="true">
+        <source src="https://cdn.coverr.co/videos/coverr-working-with-tools-5170/1080p.mp4" type="video/mp4">
+      </video>
+      <div class="heroOverlay" aria-hidden="true"></div>
+
+      <div class="container heroGrid">
+        <!-- Left -->
+        <div class="heroLeft">
+          <div class="chiprow">
+            <span class="chip">Rebobinado</span>
+            <span class="chip">Materiales</span>
+            <span class="chip">Automotriz</span>
+            <span class="chip">Stock real</span>
+          </div>
+
+          <h1 id="heroTitle"><span class="grad">Servicio Profesional de Rebobinado</span></h1>
+          <p class="lead" id="heroText">Calidad, garantía y experiencia real.</p>
+
+          <p class="muted heroSub" id="bizSlogan">
+            Rebobinado, mantenimiento, repuestos y materiales. Inventario editable con imágenes y reporte de ventas diarias.
+          </p>
+
+          <div class="ctarow">
+            <a class="btn" id="ctaHero" href="#" target="_blank" rel="noreferrer">Cotizar por WhatsApp</a>
+            <a class="btn ghost" href="#catalogo">Ver catálogo</a>
+            <button class="btn ghost" id="openCartHero" type="button">Ver carrito</button>
+          </div>
+
+          <div class="heroMiniStats">
+            <div class="miniStat reveal">
+              <strong>Horario</strong>
+              <span class="muted" id="bizHours">Lun–Sáb 08:00–18:00</span>
+            </div>
+            <div class="miniStat reveal">
+              <strong>Dirección</strong>
+              <span class="muted" id="bizAddress">Centro • (cambia aquí)</span>
+            </div>
+            <div class="miniStat reveal">
+              <strong>Hoy</strong>
+              <span class="muted" id="todayLabel">—</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right showcase -->
+        <aside class="heroRight" aria-label="Presentación">
+          <div class="showcaseCard reveal">
+            <div class="showcaseTop">
+              <span class="badge">Atención rápida</span>
+              <span class="badge">Garantía</span>
+            </div>
+
+            <div class="showcaseMedia" id="heroShot" aria-label="Vista destacada">
+              <img id="heroShotImg" alt="Trabajo y materiales" loading="lazy" />
+              <div class="showcaseCaption">
+                <strong id="heroShotTitle">Rebobinado</strong>
+                <span class="muted" id="heroShotDesc">Acabado limpio y pruebas</span>
+              </div>
+            </div>
+
+            <div class="showcaseList">
+              <div class="bullet">
+                <span class="dot"></span>
+                <div>
+                  <strong>Inventario editable</strong>
+                  <div class="muted small">Admin con imágenes, precio y stock</div>
+                </div>
+              </div>
+              <div class="bullet">
+                <span class="dot"></span>
+                <div>
+                  <strong>Carrito + ventas del día</strong>
+                  <div class="muted small">Descuenta stock y guarda registros</div>
+                </div>
+              </div>
+              <div class="bullet">
+                <span class="dot"></span>
+                <div>
+                  <strong>Cotiza por WhatsApp</strong>
+                  <div class="muted small">Mensaje listo con el pedido</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panelBtns">
+              <button class="btn small" id="cartOpen" type="button">Carrito</button>
+              <button class="btn small ghost" id="adminOpen" type="button">Admin</button>
+              <button class="btn small ghost" id="salesOpen" type="button">Vendido hoy</button>
+            </div>
+
+            <div class="mini">
+              <div><span class="k">WhatsApp:</span> <span id="bizWhatsapp">+593…</span></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="heroWave" aria-hidden="true"></div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section soft sectionCut" id="servicio">
+      <div class="container">
+        <div class="head">
+          <h2>Servicio técnico</h2>
+          <p class="muted">Rebobinado de motores, reparación y mantenimiento (preventivo y correctivo).</p>
+        </div>
+
+        <div class="grid3">
+          <article class="card reveal">
+            <div class="ic">⚡</div>
+            <h3>Rebobinado</h3>
+            <p class="muted">Trabajo técnico especializado en motores eléctricos.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ic">🔧</div>
+            <h3>Mantenimiento</h3>
+            <p class="muted">Servicio preventivo y correctivo con garantía.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ic">🚗</div>
+            <h3>Automotriz</h3>
+            <p class="muted">Repuestos eléctricos confiables y de calidad.</p>
+          </article>
+        </div>
+
+        <div class="ctaBar">
+          <div>
+            <h3>¿Necesitas diagnóstico?</h3>
+            <p class="muted">Envíanos foto/modelo y te orientamos.</p>
+          </div>
+          <a class="btn" id="ctaTech" href="#" target="_blank" rel="noreferrer">Hablar por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="antes-despues">
+      <div class="container">
+        <div class="head">
+          <h2>Antes y después</h2>
+          <p class="muted">Resultados reales: así se ve el trabajo antes y después del servicio.</p>
+        </div>
+
+        <div class="baGrid">
+          <article class="card baCard reveal">
+            <div class="baWrap">
+              <figure class="baPane">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1581092334445-2b9e0f0f1f27?auto=format&fit=crop&w=1200&q=60" alt="Antes del servicio">
+                <figcaption>Antes</figcaption>
+              </figure>
+              <figure class="baPane">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1581092918377-6f1d8c0b4e9f?auto=format&fit=crop&w=1200&q=60" alt="Después del servicio">
+                <figcaption>Después</figcaption>
+              </figure>
+            </div>
+            <h3>Rebobinado y limpieza</h3>
+            <p class="muted">Mejor aislamiento, bobinado uniforme y acabado limpio.</p>
+          </article>
+
+          <article class="card baCard reveal">
+            <div class="baWrap">
+              <figure class="baPane">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=60" alt="Antes del servicio">
+                <figcaption>Antes</figcaption>
+              </figure>
+              <figure class="baPane">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1582719478141-3a3f1a2d8a91?auto=format&fit=crop&w=1200&q=60" alt="Después del servicio">
+                <figcaption>Después</figcaption>
+              </figure>
+            </div>
+            <h3>Reparación y pruebas</h3>
+            <p class="muted">Se verifica continuidad, aislamiento y funcionamiento.</p>
+          </article>
+
+          <article class="card baCard reveal">
+            <div class="baWrap">
+              <figure class="baPane">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1581092921461-eab62b6f51f5?auto=format&fit=crop&w=1200&q=60" alt="Antes del servicio">
+                <figcaption>Antes</figcaption>
+              </figure>
+              <figure class="baPane">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1581092919535-7146dd23d8a1?auto=format&fit=crop&w=1200&q=60" alt="Después del servicio">
+                <figcaption>Después</figcaption>
+              </figure>
+            </div>
+            <h3>Mantenimiento</h3>
+            <p class="muted">Ajustes y revisión para reducir fallas y alargar la vida útil.</p>
+          </article>
+        </div>
+
+        <div class="note">
+          <strong>Tip:</strong> Cambia estas imágenes por fotos reales de tus trabajos para que la página se vea aún más confiable.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="catalogo">
+      <div class="container">
+        <div class="head">
+          <h2>Materiales y repuestos</h2>
+          <p class="muted">Agrega al carrito, registra venta y el stock se actualiza automáticamente.</p>
+        </div>
+
+        <div class="tools">
+          <input id="searchInput" type="search" placeholder="Buscar: alambre, barniz, batería, foco…" autocomplete="off" />
+          <div class="toolrow">
+            <select id="catFilter" aria-label="Filtrar por categoría">
+              <option value="all">Todas</option>
+              <option value="Rebobinado">Rebobinado</option>
+              <option value="Eléctrico">Eléctrico</option>
+              <option value="Automotriz">Automotriz</option>
+              <option value="Iluminación">Iluminación</option>
+              <option value="Baterías">Baterías</option>
+              <option value="Herramientas">Herramientas</option>
+              <option value="Repuestos">Repuestos</option>
+              <option value="Otros">Otros</option>
+            </select>
+
+            <select id="stockFilter" aria-label="Filtrar por stock">
+              <option value="all">Stock: todo</option>
+              <option value="in">En stock</option>
+              <option value="low">Stock bajo</option>
+              <option value="out">Sin stock</option>
+            </select>
+
+            <button class="btn ghost small" id="adminBtn" type="button">Admin</button>
+            <button class="btn small" id="openCartFromCatalog" type="button">Carrito</button>
+          </div>
+        </div>
+
+        <div class="gridAuto" id="productGrid" aria-live="polite"></div>
+
+        <div class="note">
+          <strong>Tip:</strong> La venta se registra con el botón <em>“Registrar venta”</em> dentro del carrito.
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="testimonios">
+      <div class="container">
+        <div class="head">
+          <h2>Reseñas de clientes</h2>
+          <p class="muted">Lo que dicen nuestros clientes.</p>
+        </div>
+
+        <div class="grid3">
+          <article class="card reviewCard">
+            <div class="stars">★★★★★</div>
+            <p>“Excelente trabajo, mi motor quedó como nuevo. Atención rápida.”</p>
+            <strong>— Carlos M.</strong>
+          </article>
+          <article class="card reviewCard">
+            <div class="stars">★★★★★</div>
+            <p>“Buenos precios y stock real. Me ayudaron a elegir el repuesto.”</p>
+            <strong>— Andrea L.</strong>
+          </article>
+          <article class="card reviewCard">
+            <div class="stars">★★★★★</div>
+            <p>“Recomendado. La cotización por WhatsApp es rápida.”</p>
+            <strong>— Luis R.</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="head">
+          <h2>Contacto</h2>
+          <p class="muted">Escríbenos por WhatsApp para cotización o servicio.</p>
+        </div>
+
+        <div class="grid2">
+          <article class="card">
+            <h3>Datos</h3>
+            <p class="muted">
+              <strong>Dirección:</strong> <span id="bizAddress2">Centro • (cambia aquí)</span><br>
+              <strong>Horario:</strong> <span id="bizHours2">Lun–Sáb 08:00–18:00</span><br>
+              <strong>WhatsApp:</strong> <span id="bizWhatsapp2">+593…</span>
+            </p>
+            <div class="row">
+              <a class="btn" id="ctaContact" href="#" target="_blank" rel="noreferrer">Escribir por WhatsApp</a>
+              <button class="btn ghost" id="openCartContact" type="button">Carrito</button>
+              <button class="btn ghost" id="salesOpen2" type="button">Vendido hoy</button>
+            </div>
+
+            <div class="mapWrap">
+              <iframe
+                title="Mapa"
+                src="https://www.google.com/maps/embed?pb=TU_LINK_DE_MAPA"
+                width="100%"
+                height="250"
+                style="border:0;border-radius:16px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </article>
+
+          <form class="card form" id="contactForm" novalidate>
+            <h3>Mensaje rápido</h3>
+
+            <label>
+              <span class="muted">Nombre</span>
+              <input id="name" type="text" placeholder="Tu nombre" minlength="2" required>
+            </label>
+
+            <label>
+              <span class="muted">Producto / Equipo</span>
+              <input id="device" type="text" placeholder="Ej: motor 1HP / barniz / foco H4..." minlength="2" required>
+            </label>
+
+            <label>
+              <span class="muted">Detalle</span>
+              <textarea id="issue" rows="4" placeholder="Marca, modelo, medida, cantidad…" minlength="5" required></textarea>
+            </label>
+
+            <div class="row">
+              <label class="grow">
+                <span class="muted">Tipo</span>
+                <select id="service">
+                  <option>Compra (material/repuesto)</option>
+                  <option>Servicio técnico</option>
+                  <option>Mayorista</option>
+                </select>
+              </label>
+              <label class="grow">
+                <span class="muted">Urgencia</span>
+                <select id="urgency">
+                  <option>Normal</option>
+                  <option>Urgente</option>
+                  <option>Para hoy</option>
+                </select>
+              </label>
+            </div>
+
+            <button class="btn" type="submit">Enviar por WhatsApp</button>
+            <p class="muted" id="formMsg" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot">
+      <p>© <span id="year"></span> <span id="bizName2">ELECCOM</span>. Todos los derechos reservados.</p>
+      <a class="muted" href="#inicio">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <a class="wa" id="waFloat" href="#" target="_blank" rel="noreferrer" aria-label="WhatsApp">WA</a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- IMAGE VIEWER -->
+  <div class="modal" id="imgModal" aria-hidden="true">
+    <div class="backdrop" data-close="true"></div>
+    <div class="box imgbox" role="dialog" aria-modal="true" aria-label="Vista de imagen">
+      <div class="boxhead">
+        <strong id="imgTitle">Imagen</strong>
+        <button class="iconbtn" data-close="true" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="boxbody">
+        <img id="imgPreview" alt="Vista ampliada" />
+      </div>
+    </div>
+  </div>
+
+  <!-- CART -->
+  <div class="modal" id="cartModal" aria-hidden="true">
+    <div class="backdrop" data-close="true"></div>
+    <div class="box wide" role="dialog" aria-modal="true" aria-label="Carrito">
+      <div class="boxhead">
+        <strong>Carrito</strong>
+        <button class="iconbtn" data-close="true" aria-label="Cerrar">✕</button>
+      </div>
+
+      <div class="boxbody">
+        <div class="cartTop">
+          <div class="muted">
+            Usa <strong>Registrar venta</strong> (descuenta stock y guarda en “vendido hoy”).
+          </div>
+          <div class="row wrap">
+            <button class="btn ghost" id="clearCart" type="button">Vaciar</button>
+            <button class="btn ghost" id="sendCart" type="button">Enviar cotización</button>
+            <button class="btn" id="registerSale" type="button">Registrar venta</button>
+          </div>
+        </div>
+
+        <div class="cartGrid" id="cartGrid"></div>
+
+        <div class="cartSummary">
+          <div class="sumLine"><span class="muted">Items:</span> <strong id="sumItems">0</strong></div>
+          <div class="sumLine"><span class="muted">Total estimado:</span> <strong id="sumTotal">$0.00</strong></div>
+          <p class="muted small">*Total referencial.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SALES TODAY -->
+  <div class="modal" id="salesModal" aria-hidden="true">
+    <div class="backdrop" data-close="true"></div>
+    <div class="box wide" role="dialog" aria-modal="true" aria-label="Ventas del día">
+      <div class="boxhead">
+        <strong>Vendido hoy</strong>
+        <button class="iconbtn" data-close="true" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="boxbody">
+        <div class="row wrap">
+          <button class="btn ghost" id="exportSalesCSV" type="button">Exportar CSV</button>
+          <button class="btn ghost" id="exportSalesJSON" type="button">Exportar JSON</button>
+          <button class="btn ghost" id="closeDay" type="button">Cerrar jornada (reinicia “vendido hoy”)</button>
+        </div>
+        <div class="salesGrid" id="salesGrid"></div>
+        <div class="cartSummary">
+          <div class="sumLine"><span class="muted">Total del día:</span> <strong id="dayTotal">$0.00</strong></div>
+          <div class="sumLine"><span class="muted">Ventas registradas:</span> <strong id="dayCount">0</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMIN -->
+  <div class="modal" id="adminModal" aria-hidden="true">
+    <div class="backdrop" data-close="true"></div>
+    <div class="box wide" role="dialog" aria-modal="true" aria-label="Administrador">
+      <div class="boxhead">
+        <strong>Administrador (Inventario)</strong>
+        <button class="iconbtn" data-close="true" aria-label="Cerrar">✕</button>
+      </div>
+
+      <div class="boxbody">
+        <div class="note">
+          <strong>Pro tip:</strong> En Admin puedes editar nombre, categoría, precio, stock, unidad, descripción e imagen.
+        </div>
+
+        <div id="adminLogin" class="adminLogin">
+          <label>
+            <span class="muted">PIN</span>
+            <input id="adminPin" type="password" inputmode="numeric" autocomplete="off" placeholder="PIN de admin">
+          </label>
+          <button class="btn" id="unlockAdmin" type="button">Desbloquear</button>
+        </div>
+
+        <div id="adminActions" class="row wrap" hidden>
+          <button class="btn small" id="addProduct" type="button">Agregar producto</button>
+          <button class="btn ghost small" id="exportInv" type="button">Exportar inventario</button>
+          <label class="btn ghost small" for="importInv" style="cursor:pointer;">Importar inventario</label>
+          <input id="importInv" type="file" accept="application/json" hidden>
+          <button class="btn ghost small" id="resetInv" type="button">Restaurar demo</button>
+          <button class="btn ghost small" id="lockAdmin" type="button">Bloquear</button>
+        </div>
+
+        <div id="adminGrid" class="adminGrid" hidden></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
